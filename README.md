@@ -2,7 +2,11 @@
 
 A simple chatbot REST App using FastAPI, Streamlit, and Groq’s LLM API; built for Red Team testing.
 
-![Streamlit UI](img/Streamlit%20UI%20Screenshot.jpg)  
+Streamlit UI            |  Streamlit UI (Reasoning LLM)
+:-------------------------:|:-------------------------:
+![Streamlit UI](img/Streamlit%20UI%20Screenshot.jpg)    |  ![Streamlit UI](img/Streamlit%20UI%20Screenshot%20(Reasoning%20LLM).jpg)  
+
+
 
 ## Files  
 - `chat_app.py` – Streamlit UI + FastAPI backend  
@@ -25,7 +29,7 @@ A simple chatbot REST App using FastAPI, Streamlit, and Groq’s LLM API; built 
 
 3. Start the FastAPI server: 
     ```sh
-    uvicorn chat_app:app --host 127.0.0.1 --port 8000 --reload
+    python -m uvicorn chat_app:app --host 127.0.0.1 --port 8000 --reload
     ```  
 4. Run the Streamlit app: 
     ```sh
