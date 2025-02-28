@@ -27,6 +27,7 @@ logging.basicConfig(filename=log_filename, level=logging.INFO, format="%(asctime
 app = FastAPI()
 
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
+MODEL_NAME = "llama-3.3-70b-versatile"
 
 @app.post("/chat")
 def chat(request: dict):
@@ -39,7 +40,7 @@ def chat(request: dict):
     messages = chat_history + [{"role": "user", "content": user_message}]
     
     payload = {
-        "model": "llama-3.1-8b-instant",
+        "model": MODEL_NAME,
         "messages": messages,
         "temperature": 0.7,
     }
@@ -130,6 +131,7 @@ def main():
         user_input = st.text_input("Enter your message:", placeholder="Type your message and press Enter...", key="user_input")
         submit_button = st.form_submit_button("Send", on_click=submit_message)
         
+    st.write(f"Using model: {MODEL_NAME}")
 
 if __name__ == "__main__":
     main()
