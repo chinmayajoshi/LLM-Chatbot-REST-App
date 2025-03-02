@@ -1,6 +1,6 @@
 # LLM Chatbot
 
-A simple chatbot REST App using FastAPI, Streamlit, and Groq’s LLM API; built for Red Team testing.
+A simple chatbot REST App using FastAPI, Streamlit, and Groq’s LLM API.
 
 Streamlit UI            |  Streamlit UI (Reasoning LLM)
 :-------------------------:|:-------------------------:
